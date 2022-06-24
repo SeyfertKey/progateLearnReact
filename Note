@@ -1,0 +1,77 @@
+Install react
+1. "npx create-react-app <Lokasi Folder>", jika sudah dilokasi folder boleh saja di ketik "npx create-react-app ." titik artinya akan di install langsung di folder tsb
+2. editnya di app.js 
+3. kalau mau compile "npm start" (dilokasi folder)
+
+Menulis JSX
+Menulis JSX hampir sama dengan menulis HTML. Anda dapat menggunakan tag yang benar-benar sama seperti HTML, seperti <h1> dan <h2> untuk judul atau <p> untuk paragraf, dan <div> untuk kolom dan container.
+
+Kesalahan Umum dengan JSX
+Meskipun JSX sangat mirip dengan HTML, ada beberapa perbedaan. Seperti yang ditunjukkan digambar sebelah kiri, beberapa element tidak dapat diletakkan didalam return. Jika Anda memiliki lebih dari satu element, gabungkan element-element tersebut ke dalam satu tag <div> seperti contoh disebelah kanan.
+
+Komentar di JSX
+Ketika JSX diletakkan di antara simbol {/* dan */}, teks di dalamnya akan menjadi komentar. Komentar tidak akan ditampilkan di browser dan tidak akan mengubah hasil code Anda. Sebagian editor teks akan menunjukkan komentar dalam teks warna abu-abu.
+
+Catatan tentang tag img
+Di HTML, tag img tidak memiliki tag penutup sehingga dapat ditulis seperti <img src='URL gambar'>. Namun, tag penutup diperlukan oleh tag img didalam JSX seperti <img src='URL gambar' />. ingatlah didalam JSX, tag img harus diakhir dengan /.
+
+Catatan tentang tag img
+Di HTML, tag img tidak memiliki tag penutup sehingga dapat ditulis seperti <img src='URL gambar'>. Namun, tag penutup diperlukan oleh tag img didalam JSX seperti <img src='URL gambar' />. ingatlah didalam JSX, tag img harus diakhir dengan /.
+
+Struktur App.js
+File App.js selalu memiliki element dan struktur yang ditunjukkan di bawah ini.
+Catatan: Jika Anda lupa akan inheritence atau class, Anda dapat selalu membuka Slide Library untuk mereviewnya.
+
+// Import React
+import React from 'react';
+
+// Nyatakan class App
+class App extends React.Component {
+// class yang akan menerima warisan dari React.Component
+    render() {
+    // definisikan method render yang me-return JSX
+    return (
+      <h1>Hello React</h1>
+    );
+  }
+}
+
+// Export class App 
+export default App;
+
+Kolom untuk JSX dan JS
+Seperti yang dapat Anda lihat di bawah ini, area JSX dan JS (JavaScript) dibagi dengan jelas. JSX hanya ditulis di dalam return dari method render. Element JSX akan ditampilkan di browser.
+
+Menulis JavaScript
+JavaScript dapat ditulis di luar kolom return (tetapi tetap di dalam method render). Dalam contoh dibawah ini, constant text ditentukan dengan code JavaScript di method render.
+
+Meletakkan Code JS Di Dalam JSX
+Bahkan dikolom return, JavaScript dapat ditulis didalam JSX. Untuk melakukan ini, code JavaScript harus diletakkan didalam tanda kurung kurawal { }. Selain itu, nilai atribut tag juga dapat disisipkan kedalam JSX dengan tanda kurung kurawal { } (seperti contoh di sebelah kanan).
+
+Komentar JSX dan JS
+Kita telah melihat ketika JSX diletakkan di antara {/* dan */} maka JSX tersebut akan menjadi komentar (seperti contoh disebelah kiri). Namun, untuk JavaScript yang berada diluar return, membuat baris sebagai komentar harus dimulai dengan dua garis miring //, seperti contoh disebelah kanan.
+
+import React from 'react';
+
+class App extends React.Component {
+  render() {
+    // Nyatakan constant name 
+    const name = "Ninja Ken";
+    
+    // Nyatakan constant imgUrl 
+    const imgUrl = "https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/react/kentheninja.png"
+    
+    return (
+      <div>
+        {/* Gunakan constant name untuk menampilkan "Ninja Ken" */}
+        <h1>{name}</h1>
+        
+        {/* Gunakan constant imgUrl untuk menampilkan gambar */}
+        <img src={imgUrl}/>
+        
+      </div>
+    );
+  }
+}
+
+export default App;

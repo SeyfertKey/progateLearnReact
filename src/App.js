@@ -18,6 +18,20 @@ function App() {
           Learn React
         </a>
       </header>
+      <body>
+        <div>
+        
+        {/* Gunakan tag <h1> untuk mendisplay "Hello World" */}
+        <h1> Hello World </h1>
+        
+        {/* Gunakan tag <p> untuk mendisplay "Ayo belajar React bersama-sama!" */}
+        <p> Ayo belajar React bersama-sama! </p>
+
+        {/* Gunakan tag <img> untuk menambahkan gambar */}
+        <img src='https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/react/kentheninja.png' alt="" />
+        
+        </div>    
+      </body>
     </div>
   );
 }
